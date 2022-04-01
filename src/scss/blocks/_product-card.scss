@@ -1,0 +1,179 @@
+.product-card {
+  max-width: 750px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+
+  @media screen and (max-width: 768px) {
+    max-width: 290px;
+  }
+
+  &__card {
+    display: inherit;
+
+    @media (max-width: 768px) {
+      display: inline-block;
+      max-width: calc(290px - 8px - 10px);
+    }
+  }
+
+  &__image {
+    margin: 22px 40px 23px 20px;
+
+    @media screen and (max-width: 768px) {
+      margin: 15px 15px 8px;
+      float: left;
+      width: 67px;
+      height: 50px;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    margin: 25px 0 42px 0;
+
+    @media screen and (max-width: 768px) {
+      margin: 15px 0 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__main-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @include font-size-main;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-bottom: 16px;
+      @include font-size-secondary;
+    }
+  }
+
+  &__name {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__main-mobile {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: inline-block;
+      border: 1px solid #e6e6e6;
+      padding: 4px 10px;
+      border-radius: 7px;
+      margin-right: 10px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__secondary-info {
+    display: flex;
+    column-gap: 15px;
+    @include font-size-secondary;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      @include font-size-secondary-mobile;
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__description-tone {
+    margin-left: 4px;
+    margin-right: 10px;
+  }
+
+  &__description-square {
+    width: 14px;
+    height: 14px;
+    background: #353e4d;
+
+    @media screen and (max-width: 768px) {
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__number-value {
+    margin-left: 10px;
+  }
+
+  &__size {
+    display: flex;
+    align-items: center;
+  }
+
+  &__size-name {
+    margin-right: 10px;
+
+    @media screen and (max-width: 768px) {
+      margin-right: 4px;
+    }
+  }
+
+  &__xmark {
+    margin: 0 5px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 3px;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+    color: #c9c9c9;
+    background: #f9f9f9;
+    padding: 0 11px;
+    font-family: inherit;
+    transition: all 0.3s;
+
+    @media (max-width: 768px) {
+      background: none;
+      margin: 18px 10px 0 0;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+    }
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+}

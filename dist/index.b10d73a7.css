@@ -1,0 +1,252 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: Roboto, Arial, sans-serif;
+  color: #414141;
+}
+.product-card {
+  max-width: 750px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+}
+@media screen and (max-width: 768px) {
+  .product-card {
+    max-width: 290px;
+  }
+}
+.product-card__card {
+  display: inherit;
+}
+@media (max-width: 768px) {
+  .product-card__card {
+    display: inline-block;
+    max-width: 272px;
+  }
+}
+.product-card__image {
+  margin: 22px 40px 23px 20px;
+}
+@media screen and (max-width: 768px) {
+  .product-card__image {
+    margin: 15px 15px 8px;
+    float: left;
+    width: 67px;
+    height: 50px;
+  }
+}
+.product-card__info {
+  flex-grow: 1;
+  margin: 25px 0 42px 0;
+}
+@media screen and (max-width: 768px) {
+  .product-card__info {
+    margin: 15px 0 15px;
+    padding-left: 15px;
+  }
+}
+.product-card__main-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+@media screen and (max-width: 768px) {
+  .product-card__main-info {
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-card__name {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-card__main-mobile {
+    display: flex;
+    align-items: center;
+  }
+}
+.product-card__mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .product-card__mobile {
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    padding: 4px 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+  }
+}
+.product-card__price {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.product-card__secondary-info {
+  display: flex;
+  column-gap: 15px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+@media screen and (max-width: 768px) {
+  .product-card__secondary-info {
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+.product-card__description {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .product-card__description {
+    margin-bottom: 11px;
+  }
+}
+.product-card__description-tone {
+  margin-left: 4px;
+  margin-right: 10px;
+}
+.product-card__description-square {
+  width: 14px;
+  height: 14px;
+  background: #353e4d;
+}
+@media screen and (max-width: 768px) {
+  .product-card__description-square {
+    width: 11px;
+    height: 11px;
+  }
+}
+.product-card__number {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .product-card__number {
+    display: none;
+  }
+}
+.product-card__number-value {
+  margin-left: 10px;
+}
+.product-card__size {
+  display: flex;
+  align-items: center;
+}
+.product-card__size-name {
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .product-card__size-name {
+    margin-right: 4px;
+  }
+}
+.product-card__xmark {
+  margin: 0 5px;
+}
+@media screen and (max-width: 768px) {
+  .product-card__xmark {
+    margin: 0 3px;
+  }
+}
+.product-card__close {
+  cursor: pointer;
+  margin-left: 20px;
+  border: none;
+  color: #c9c9c9;
+  background: #f9f9f9;
+  padding: 0 11px;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .product-card__close {
+    background: none;
+    margin: 18px 10px 0 0;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+  }
+}
+.product-card__close:hover {
+  background: #f0f0f0;
+}
+/*# sourceMappingURL=index.b10d73a7.css.map */
